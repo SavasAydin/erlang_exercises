@@ -1,6 +1,6 @@
 #!/bin/bash
 
-EXERCISE_FILE='exercise_02'
+EXERCISE_FILE='exercise_04'
 
 CURRENT_DIR=$(dirname ${0})
 source ${CURRENT_DIR}/engine.bash
@@ -8,14 +8,13 @@ source ${CURRENT_DIR}/engine.bash
 description_and_usage()
 {
     cat <<EOF
-
 ==================================================
-Write a program that increments elements of a list by one.
+Write a program that splits list into even and odd number.
 The program must have one exported function run/1
 
 Example
 ==================================================
-        MODULE_NAME:run([1,2,3]) returns [2,3,4].
+        MODULE_NAME:run([1,2,3,4]) returns {[2,4],[1,3]}.
 
 
 Verification of the exercise
@@ -33,8 +32,8 @@ generate_test_module()
 -module(${1}_tests).
 -include_lib("eunit/include/eunit.hrl").
 
-${EXERCISE_FILE}_increment_elements_of_list_by_one_test() ->
-    ?assertEqual([2,3,4,5], ${1}:run([1,2,3,4])).
+${EXERCISE_FILE}_partition_list_into_even_numbers_and_odd_numbers_test() ->
+    ?assertEqual({[2,4],[1,3]}, ${1}:run([1,2,3,4])).
 
 EOF
 }
