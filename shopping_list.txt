@@ -1,0 +1,12 @@
+hem, 120g, 25
+coca-cola 33cl, 6-p, 39
+bacon, 140g, 13
+butter, 600g, 34
+minced_meat, 1kg, 95
+shower_gel, 500ml, 28
+juice, 1l, 20
+baguettes, 6-p, 12
+diaper, 40-p, 110
+milk, 1l, 9
+ketchup, 1kg, 26
+
