@@ -10,11 +10,11 @@ description_and_usage()
     cat <<EOF
 ==================================================
 Write a program that splits list into even and odd number.
-The program must have one exported function run/1
+The program must have one exported function ${EXERCISE_FILE}/1
 
 Example
 ==================================================
-        MODULE_NAME:run([1,2,3,4]) returns {[2,4],[1,3]}.
+        MODULE_NAME:${EXERCISE_FILE}([1,2,3,4]) returns {[2,4],[1,3]}.
 
 
 Verification of the exercise
@@ -33,7 +33,7 @@ generate_test_module()
 -include_lib("eunit/include/eunit.hrl").
 
 ${EXERCISE_FILE}_partition_list_into_even_numbers_and_odd_numbers_test() ->
-    ?assertEqual({[2,4],[1,3]}, ${1}:run([1,2,3,4])).
+    ?assertEqual({[2,4],[1,3]}, ${1}:${EXERCISE_FILE}([1,2,3,4])).
 
 EOF
 }

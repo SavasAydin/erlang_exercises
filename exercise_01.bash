@@ -11,11 +11,11 @@ description_and_usage()
 
 ==================================================
 Write a program that converts a tuple to list.
-The program must have one exported function run/1
+The program must have one exported function ${EXERCISE_FILE}/1
 
 Example
 ==================================================
-        MODULE_NAME:run({1,2,3}) returns [1,2,3].
+        MODULE_NAME:${EXERCISE_FILE}({1,2,3}) returns [1,2,3].
 
 
 Verification of the exercise
@@ -34,7 +34,7 @@ generate_test_module()
 -include_lib("eunit/include/eunit.hrl").
 
 ${EXERCISE_FILE}_tuple_to_list_test() ->
-    ?assertEqual([1,2,3,4], ${1}:run({1,2,3,4})).
+    ?assertEqual([1,2,3,4], ${1}:${EXERCISE_FILE}({1,2,3,4})).
 EOF
 }
 

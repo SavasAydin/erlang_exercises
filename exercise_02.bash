@@ -11,11 +11,11 @@ description_and_usage()
 
 ==================================================
 Write a program that increments elements of a list by one.
-The program must have one exported function run/1
+The program must have one exported function ${EXERCISE_FILE}/1
 
 Example
 ==================================================
-        MODULE_NAME:run([1,2,3]) returns [2,3,4].
+        MODULE_NAME:${EXERCISE_FILE}([1,2,3]) returns [2,3,4].
 
 
 Verification of the exercise
@@ -34,7 +34,7 @@ generate_test_module()
 -include_lib("eunit/include/eunit.hrl").
 
 ${EXERCISE_FILE}_increment_elements_of_list_by_one_test() ->
-    ?assertEqual([2,3,4,5], ${1}:run([1,2,3,4])).
+    ?assertEqual([2,3,4,5], ${1}:${EXERCISE_FILE}([1,2,3,4])).
 
 EOF
 }

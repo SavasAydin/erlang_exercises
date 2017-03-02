@@ -1,6 +1,6 @@
 #!/bin/bash
 
-EXERCISE_FILE='exercise_03'
+EXERCISE_FILE='exercise_05'
 
 CURRENT_DIR=$(dirname ${0})
 source ${CURRENT_DIR}/engine.bash
@@ -9,13 +9,12 @@ description_and_usage()
 {
     cat <<EOF
 ==================================================
-Write a program that finds even numbers in a list.
+Write a program that finds palindrome words in a given text.
 The program must have one exported function ${EXERCISE_FILE}/1
 
 Example
 ==================================================
-        MODULE_NAME:${EXERCISE_FILE}([1,2,3,4]) returns [2,4].
-
+        MODULE_NAME:${EXERCISE_FILE}("savas is a palindrome") returns ["savas", "a"]
 
 Verification of the exercise
 ================================================== 
@@ -32,8 +31,8 @@ generate_test_module()
 -module(${1}_tests).
 -include_lib("eunit/include/eunit.hrl").
 
-${EXERCISE_FILE}_find_even_numbers_in_a_given_list_test() ->
-    ?assertEqual([2,4], ${1}:${EXERCISE_FILE}([1,2,3,4])).
+${EXERCISE_FILE}_find_palindrome_words_in_a_given_text_test() ->
+    ?assertEqual(["savas", "a"], ${1}:${EXERCISE_FILE}("savas is a palindrome")).
 
 EOF
 }
