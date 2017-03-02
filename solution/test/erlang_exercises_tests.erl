@@ -22,17 +22,35 @@ exercise_06_count_occurrences_of_a_char_in_a_string_test() ->
 exercise_06_returns_0_if_a_char_does_not_appaer_in_a_string_test() ->
     ?assertEqual(0, erlang_exercises:exercise_06($z, "savas is a palindrome")).
 
-exercise_07_prepend_given_list_with_element_that_is_not_in_the_list_test() ->
+exercise_07_prepend_list_if_element_is_not_present_in_the_list_test() ->
     ?assertEqual([1,2,a,b], erlang_exercises:exercise_07(1, [2,a,b])).
 
-exercise_07_do_not_prepend_given_list_with_element_that_is_already_in_the_list_test() ->
+exercise_07_do_not_prepend_list_if_element_is_present_in_the_list_01_test() ->
+    ?assertEqual([1,2,a,b], erlang_exercises:exercise_07(1, [1,2,a,b])).
+
+exercise_07_do_not_prepend_list_if_element_is_present_in_the_list_02_test() ->
     ?assertEqual([1,2,a,b], erlang_exercises:exercise_07(a, [1,2,a,b])).
 
-exercise_08_append_given_list_with_given_element_test() ->
-    ?assertEqual([1,2,3,4], erlang_exercises:exercise_08(4, [1,2,3])).
+exercise_08_append_list_if_element_is_not_present_in_the_list_test() ->
+    ?assertEqual([1,2,a,b], erlang_exercises:exercise_08(b, [1,2,a])).
+
+exercise_08_do_not_append_list_if_element_is_present_in_the_list_01_test() ->
+    ?assertEqual([1,2,a,b], erlang_exercises:exercise_08(b, [1,2,a,b])).
+
+exercise_08_do_not_append_list_if_element_is_present_in_the_list_02_test() ->
+    ?assertEqual([1,2,a,b], erlang_exercises:exercise_08(2, [1,2,a,b])).
+
+exercise_09_subtract_first_element_in_given_list_test() ->
+    ?assertEqual([], erlang_exercises:exercise_09(1, [a])).
 
 exercise_09_subtract_nth_element_in_given_list_test() ->
-    ?assertEqual([1,2,3,2,3], erlang_exercises:exercise_09(4, [1,2,3,1,2,3])).
+    ?assertEqual([a,b,c,e,f], erlang_exercises:exercise_09(4, [a,b,c,d,e,f])).
+
+exercise_09_do_not_subtract_nth_element_if_length_of_the_list_is_smaller_than_n_test() ->
+    ?assertEqual([a], erlang_exercises:exercise_09(3, [a])).
+
+exercise_09_do_not_subtract_if_list_is_empty_test() ->
+    ?assertEqual([], erlang_exercises:exercise_09(2, [])).
 
 exercise_10_get_index_of_first_occurrence_of_an_element_in_a_list_test() ->
     ?assertEqual(2, erlang_exercises:exercise_10(3, [1,3,2,4,3])).

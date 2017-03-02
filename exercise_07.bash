@@ -16,8 +16,8 @@ The program must have one exported function ${EXERCISE_FILE}/2
 Example
 ==================================================
         MODULE_NAME:${EXERCISE_FILE}(1, [2,a,b])   returns [1,2,a,b]
-        MODULE_NAME:${EXERCISE_FILE}(a, [2,a,b])   returns [2,a,b]
         MODULE_NAME:${EXERCISE_FILE}(1, [1,2,a,b]) returns [1,2,a,b]
+        MODULE_NAME:${EXERCISE_FILE}(a, [1,2,a,b]) returns [1,2,a,b]
 
 Verification of the exercise
 ================================================== 
@@ -34,10 +34,13 @@ generate_test_module()
 -module(${1}_tests).
 -include_lib("eunit/include/eunit.hrl").
 
-${EXERCISE_FILE}_prepend_given_list_with_element_that_is_not_in_the_list_test() ->
+${EXERCISE_FILE}_prepend_list_if_element_is_not_present_in_the_list_test() ->
     ?assertEqual([1,2,a,b], erlang_exercises:${EXERCISE_FILE}(1, [2,a,b])).
 
-${EXERCISE_FILE}_do_not_prepend_given_list_with_element_that_is_already_in_the_list_test() ->
+${EXERCISE_FILE}_do_not_prepend_list_if_element_is_present_in_the_list_01_test() ->
+    ?assertEqual([1,2,a,b], erlang_exercises:${EXERCISE_FILE}(1, [1,2,a,b])).
+
+${EXERCISE_FILE}_do_not_prepend_list_if_element_is_present_in_the_list_02_test() ->
     ?assertEqual([1,2,a,b], erlang_exercises:${EXERCISE_FILE}(a, [1,2,a,b])).
 
 EOF
