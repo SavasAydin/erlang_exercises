@@ -15,13 +15,13 @@ The program must have one exported function ${EXERCISE_FILE}/2
 
 Example
 ==================================================
-        MODULE_NAME:${EXERCISE_FILE}(1, [a])           returns []
-        MODULE_NAME:${EXERCISE_FILE}(4, [a,b,c,d,e,f]) returns [a,b,c,e,f]
-        MODULE_NAME:${EXERCISE_FILE}(3, [a])           returns [a]
-        MODULE_NAME:${EXERCISE_FILE}(2, [])            returns []
+	MODULE_NAME:${EXERCISE_FILE}(1, [a])           returns []
+	MODULE_NAME:${EXERCISE_FILE}(4, [a,b,c,d,e,f]) returns [a,b,c,e,f]
+	MODULE_NAME:${EXERCISE_FILE}(3, [a])           returns [a]
+	MODULE_NAME:${EXERCISE_FILE}(2, [])            returns []
 
 Verification of the exercise
-================================================== 
+==================================================
 You can verify your answer using your answer file as an argument to the option f.
        bash ${EXERCISE_FILE}.bash -f ANSWER_FILE
 

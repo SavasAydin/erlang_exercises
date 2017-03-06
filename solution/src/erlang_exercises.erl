@@ -77,7 +77,7 @@ exercise_10(N, L) ->
     Indices = indices_of(N, L),
     case Indices of
 	[] ->
-	    not_found;
+	    element_not_found;
 	_ ->
 	    hd(Indices)
     end.
@@ -86,7 +86,7 @@ exercise_11(N, L) ->
     Indices = indices_of(N, L),
     case Indices of
 	[] ->
-	    not_found;
+	    element_not_found;
 	_ ->
 	    lists:last(Indices)
     end.

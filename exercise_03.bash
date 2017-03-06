@@ -14,11 +14,11 @@ The program must have one exported function ${EXERCISE_FILE}/1
 
 Example
 ==================================================
-        MODULE_NAME:${EXERCISE_FILE}([1,2,3,4]) returns [2,4].
+	MODULE_NAME:${EXERCISE_FILE}([1,2,3,4]) returns [2,4].
 
 
 Verification of the exercise
-================================================== 
+==================================================
 You can verify your answer using your answer file as an argument to the option f.
        bash ${EXERCISE_FILE}.bash -f ANSWER_FILE
 

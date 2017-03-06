@@ -14,11 +14,11 @@ The program must have one exported function ${EXERCISE_FILE}/2
 
 Example
 ==================================================
-        MODULE_NAME:${EXERCISE_FILE}(\$s, "savas is a palindrome") returns 3
-        MODULE_NAME:${EXERCISE_FILE}(\$z, "savas is a palindrome") returns 0
+	MODULE_NAME:${EXERCISE_FILE}(\$s, "savas is a palindrome") returns 3
+	MODULE_NAME:${EXERCISE_FILE}(\$z, "savas is a palindrome") returns 0
 
 Verification of the exercise
-================================================== 
+==================================================
 You can verify your answer using your answer file as an argument to the option f.
        bash ${EXERCISE_FILE}.bash -f ANSWER_FILE
 

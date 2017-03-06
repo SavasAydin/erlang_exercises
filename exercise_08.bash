@@ -15,12 +15,12 @@ The program must have one exported function ${EXERCISE_FILE}/2
 
 Example
 ==================================================
-        MODULE_NAME:${EXERCISE_FILE}(b, [1,2,a])   returns [1,2,a,b]
-        MODULE_NAME:${EXERCISE_FILE}(b, [1,2,a,b]) returns [1,2,a,b]
-        MODULE_NAME:${EXERCISE_FILE}(2, [1,2,a,b]) returns [1,2,a,b]
+	MODULE_NAME:${EXERCISE_FILE}(b, [1,2,a])   returns [1,2,a,b]
+	MODULE_NAME:${EXERCISE_FILE}(b, [1,2,a,b]) returns [1,2,a,b]
+	MODULE_NAME:${EXERCISE_FILE}(2, [1,2,a,b]) returns [1,2,a,b]
 
 Verification of the exercise
-================================================== 
+==================================================
 You can verify your answer using your answer file as an argument to the option f.
        bash ${EXERCISE_FILE}.bash -f ANSWER_FILE
 

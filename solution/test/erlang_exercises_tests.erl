@@ -52,17 +52,23 @@ exercise_09_do_not_subtract_nth_element_if_length_of_the_list_is_smaller_than_n_
 exercise_09_do_not_subtract_if_list_is_empty_test() ->
     ?assertEqual([], erlang_exercises:exercise_09(2, [])).
 
-exercise_10_get_index_of_first_occurrence_of_an_element_in_a_list_test() ->
+exercise_10_get_index_of_first_occurrence_of_an_element_in_a_list_01_test() ->
+    ?assertEqual(4, erlang_exercises:exercise_10(b, [1,2,a,b,c])).
+
+exercise_10_get_index_of_first_occurrence_of_an_element_in_a_list_02_test() ->
     ?assertEqual(2, erlang_exercises:exercise_10(3, [1,3,2,4,3])).
 
 exercise_10_returns_not_found_if_the_element_is_not_in_the_list_test() ->
-    ?assertEqual(not_found, erlang_exercises:exercise_10(5, [1,3,2,4,3])).
+    ?assertEqual(element_not_found, erlang_exercises:exercise_10(5, [1,3,2,4,3])).
 
-exercise_11_get_index_of_last_occurrence_of_an_element_in_a_list_test() ->
+exercise_11_get_index_of_last_occurrence_of_an_element_in_a_list_01_test() ->
+    ?assertEqual(4, erlang_exercises:exercise_11(b, [1,2,a,b,c])).
+
+exercise_11_get_index_of_last_occurrence_of_an_element_in_a_list_02_test() ->
     ?assertEqual(5, erlang_exercises:exercise_11(3, [1,3,2,4,3])).
 
 exercise_11_returns_not_found_if_an_element_is_not_in_a_list_test() ->
-    ?assertEqual(not_found, erlang_exercises:exercise_11(5, [1,3,2,4,3])).
+    ?assertEqual(element_not_found, erlang_exercises:exercise_11(5, [1,3,2,4,3])).
 
 %% map applies a given function to each element of a list,
 %% returning a list of results in the same order.

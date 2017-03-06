@@ -1,6 +1,6 @@
 #!/bin/bash
 
-EXERCISE_FILE='exercise_05'
+EXERCISE_FILE='exercise_12'
 
 CURRENT_DIR=$(dirname ${0})
 source ${CURRENT_DIR}/engine.bash
@@ -9,12 +9,15 @@ description_and_usage()
 {
     cat <<EOF
 ==================================================
-Write a program that finds palindrome words in a given text.
-The program must have one exported function ${EXERCISE_FILE}/1
+Write a program that applies a given function to each element of a list.
+The program must have one exported function ${EXERCISE_FILE}/2
 
 Example
 ==================================================
-	MODULE_NAME:${EXERCISE_FILE}("savas is a palindrome") returns ["savas", "a"]
+Let the function be
+	Fun = fun(X) -> X*2 end,
+Then
+	MODULE_NAME:${EXERCISE_FILE}(Fun, [1,2,3,4]) returns [2,4,6,8]
 
 Verification of the exercise
 ==================================================
@@ -31,8 +34,9 @@ generate_test_module()
 -module(${1}_tests).
 -include_lib("eunit/include/eunit.hrl").
 
-${EXERCISE_FILE}_find_palindrome_words_in_a_given_text_test() ->
-    ?assertEqual(["savas", "a"], ${1}:${EXERCISE_FILE}("savas is a palindrome")).
+${EXERCISE_FILE}_implement_lists_map_test() ->
+    Fun = fun(X) -> X * 2 end,
+    ?assertEqual([2,4,6,8], erlang_exercises:${EXERCISE_FILE}(Fun, [1,2,3,4])).
 
 EOF
 }
