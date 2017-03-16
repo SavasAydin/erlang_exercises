@@ -35,13 +35,13 @@ generate_test_module()
 -include_lib("eunit/include/eunit.hrl").
 
 ${EXERCISE_FILE}_prepend_list_if_element_is_not_present_in_the_list_test() ->
-    ?assertEqual([1,2,a,b], erlang_exercises:${EXERCISE_FILE}(1, [2,a,b])).
+    ?assertEqual([1,2,a,b], ${1}:${EXERCISE_FILE}(1, [2,a,b])).
 
 ${EXERCISE_FILE}_do_not_prepend_list_if_element_is_present_in_the_list_01_test() ->
-    ?assertEqual([1,2,a,b], erlang_exercises:${EXERCISE_FILE}(1, [1,2,a,b])).
+    ?assertEqual([1,2,a,b], ${1}:${EXERCISE_FILE}(1, [1,2,a,b])).
 
 ${EXERCISE_FILE}_do_not_prepend_list_if_element_is_present_in_the_list_02_test() ->
-    ?assertEqual([1,2,a,b], erlang_exercises:${EXERCISE_FILE}(a, [1,2,a,b])).
+    ?assertEqual([1,2,a,b], ${1}:${EXERCISE_FILE}(a, [1,2,a,b])).
 
 EOF
 }

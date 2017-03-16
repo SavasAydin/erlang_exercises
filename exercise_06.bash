@@ -33,10 +33,10 @@ generate_test_module()
 -include_lib("eunit/include/eunit.hrl").
 
 ${EXERCISE_FILE}_count_occurrences_of_a_char_in_a_string_test() ->
-    ?assertEqual(3, erlang_exercises:${EXERCISE_FILE}(\$s, "savas is a palindrome")).
+    ?assertEqual(3, ${1}:${EXERCISE_FILE}(\$s, "savas is a palindrome")).
 
 ${EXERCISE_FILE}_returns_0_if_a_char_does_not_appaer_in_a_string_test() ->
-    ?assertEqual(0, erlang_exercises:${EXERCISE_FILE}(\$z, "savas is a palindrome")).
+    ?assertEqual(0, ${1}:${EXERCISE_FILE}(\$z, "savas is a palindrome")).
 
 EOF
 }

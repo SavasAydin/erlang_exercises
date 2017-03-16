@@ -36,7 +36,7 @@ generate_test_module()
 
 ${EXERCISE_FILE}_implement_lists_map_test() ->
     Fun = fun(X) -> X * 2 end,
-    ?assertEqual([2,4,6,8], erlang_exercises:${EXERCISE_FILE}(Fun, [1,2,3,4])).
+    ?assertEqual([2,4,6,8], ${1}:${EXERCISE_FILE}(Fun, [1,2,3,4])).
 
 EOF
 }

@@ -35,13 +35,13 @@ generate_test_module()
 -include_lib("eunit/include/eunit.hrl").
 
 ${EXERCISE_FILE}_get_index_of_first_occurrence_of_an_element_in_a_list_01_test() ->
-    ?assertEqual(4, erlang_exercises:${EXERCISE_FILE}(b, [1,2,a,b,c])).
+    ?assertEqual(4, ${1}:${EXERCISE_FILE}(b, [1,2,a,b,c])).
 
 ${EXERCISE_FILE}_get_index_of_first_occurrence_of_an_element_in_a_list_02_test() ->
-    ?assertEqual(2, erlang_exercises:${EXERCISE_FILE}(3, [1,3,2,4,3])).
+    ?assertEqual(2, ${1}:${EXERCISE_FILE}(3, [1,3,2,4,3])).
 
 ${EXERCISE_FILE}_returns_not_found_if_the_element_is_not_in_the_list_test() ->
-    ?assertEqual(element_not_found, erlang_exercises:${EXERCISE_FILE}(5, [1,3,2,4,3])).
+    ?assertEqual(element_not_found, ${1}:${EXERCISE_FILE}(5, [1,3,2,4,3])).
 
 EOF
 }

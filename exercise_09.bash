@@ -36,16 +36,16 @@ generate_test_module()
 -include_lib("eunit/include/eunit.hrl").
 
 ${EXERCISE_FILE}_subtract_first_element_in_given_list_test() ->
-    ?assertEqual([], erlang_exercises:${EXERCISE_FILE}(1, [a])).
+    ?assertEqual([], ${1}:${EXERCISE_FILE}(1, [a])).
 
 ${EXERCISE_FILE}_subtract_nth_element_in_given_list_test() ->
-    ?assertEqual([a,b,c,e,f], erlang_exercises:${EXERCISE_FILE}(4, [a,b,c,d,e,f])).
+    ?assertEqual([a,b,c,e,f], ${1}:${EXERCISE_FILE}(4, [a,b,c,d,e,f])).
 
 ${EXERCISE_FILE}_do_not_subtract_nth_element_if_length_of_the_list_is_smaller_than_n_test() ->
-    ?assertEqual([a], erlang_exercises:${EXERCISE_FILE}(3, [a])).
+    ?assertEqual([a], ${1}:${EXERCISE_FILE}(3, [a])).
 
 ${EXERCISE_FILE}_do_not_subtract_if_list_is_empty_test() ->
-    ?assertEqual([], erlang_exercises:${EXERCISE_FILE}(2, [])).
+    ?assertEqual([], ${1}:${EXERCISE_FILE}(2, [])).
 
 EOF
 }
