@@ -1,0 +1,23 @@
+The exercises are prepared for complete beginners.
+
+How the exercises work
+  Execute them 
+    bash exercise_01.bash
+
+  Follow the instructions on screen
+    ==================================================
+    Write a program that converts a tuple to list.
+    The program must have one exported function exercise_01/1
+
+    Example
+    ==================================================
+	    MODULE_NAME:exercise_01({1,2,3}) returns [1,2,3].
+
+
+    Verification of the exercise
+    ==================================================
+    You can verify your answer using your answer file as an argument to the option f.
+	   bash exercise_01.bash -f ANSWER_FILE
+
+
+  
