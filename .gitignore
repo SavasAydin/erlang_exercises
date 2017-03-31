@@ -1,0 +1,5 @@
+.eunit/
+*.app.src
+*_app.erl
+*_sup.erl
+demo/
